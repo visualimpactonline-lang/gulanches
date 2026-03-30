@@ -74,7 +74,7 @@ function AdminPage() {
   return (
     <>
       <Helmet>
-        <title>Admin - GU Lanches</title>
+        <title>Admin - Lanches</title>
         <meta name="description" content="Painel simples para adicionar ou remover produtos do cardápio da GU Lanches." />
       </Helmet>
 
