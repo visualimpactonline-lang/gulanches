@@ -1,0 +1,109 @@
+
+import React from 'react';
+import { WHATSAPP_LINK } from '@/data.js';
+import { Link } from 'react-router-dom';
+import { Instagram, MessageCircle, Phone, MapPin, Clock } from 'lucide-react';
+
+function Footer() {
+  return (
+    <footer className="bg-[#0a0a0a] text-gray-300 py-12 mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-xl">GU</span>
+              </div>
+              <span className="text-xl font-bold text-white">GU Lanches</span>
+            </div>
+            <p className="text-sm leading-relaxed">
+              Lanches artesanais com ingredientes selecionados e sabor incomparável.
+            </p>
+          </div>
+
+          <div>
+            <span className="font-semibold text-white mb-4 block">Links rápidos</span>
+            <nav className="space-y-2">
+              <Link to="/" className="block text-sm hover:text-primary transition-colors duration-200">
+                Home
+              </Link>
+              <Link to="/cardapio" className="block text-sm hover:text-primary transition-colors duration-200">
+                Cardápio
+              </Link>
+              <Link to="/contato" className="block text-sm hover:text-primary transition-colors duration-200">
+                Contato
+              </Link>
+            </nav>
+          </div>
+
+          <div>
+            <span className="font-semibold text-white mb-4 block">Horário de funcionamento</span>
+            <div className="space-y-2 text-sm">
+              <div className="flex items-start gap-2">
+                <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <div>
+                  <p>Seg-Sex: 11h-22h</p>
+                  <p>Sábado: 11h-23h</p>
+                  <p>Domingo: 12h-22h</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="flex items-start gap-2 text-sm">
+              <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" />
+              <span>Rua das Flores, 123, São Paulo, SP</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm hover:text-primary transition-colors duration-200"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+                <span>Instagram</span>
+              </a>
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm hover:text-primary transition-colors duration-200"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle className="w-5 h-5" />
+                <span>WhatsApp</span>
+              </a>
+              <a
+                href="tel:+5511999999999"
+                className="flex items-center gap-2 text-sm hover:text-primary transition-colors duration-200"
+                aria-label="Telefone"
+              >
+                <Phone className="w-5 h-5" />
+                <span>Telefone</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="text-center text-sm border-t border-gray-800 pt-6">
+            <p>&copy; {new Date().getFullYear()} GU Lanches. Todos os direitos reservados.</p>
+            <div className="flex justify-center gap-4 mt-2">
+              <span className="hover:text-primary transition-colors duration-200 cursor-pointer">
+                Política de Privacidade
+              </span>
+              <span className="hover:text-primary transition-colors duration-200 cursor-pointer">
+                Termos de Serviço
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+export default Footer;
